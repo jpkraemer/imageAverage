@@ -12,6 +12,9 @@
 		80CBC26E19A6946800DC0698 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80CBC26D19A6946800DC0698 /* Images.xcassets */; };
 		80CBC27119A6946800DC0698 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80CBC26F19A6946800DC0698 /* MainMenu.xib */; };
 		80CBC27D19A6946800DC0698 /* ImageAverageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CBC27C19A6946800DC0698 /* ImageAverageTests.m */; };
+		80CBC28819A6960200DC0698 /* IAAverageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CBC28719A6960200DC0698 /* IAAverageFilter.m */; };
+		80CBC28A19A6970D00DC0698 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CBC28919A6970D00DC0698 /* QuartzCore.framework */; };
+		80CBC28C19A69DE000DC0698 /* AverageFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 80CBC28B19A69DE000DC0698 /* AverageFilter.cikernel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 		80CBC27619A6946800DC0698 /* ImageAverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageAverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CBC27B19A6946800DC0698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80CBC27C19A6946800DC0698 /* ImageAverageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageAverageTests.m; sourceTree = "<group>"; };
+		80CBC28619A6960200DC0698 /* IAAverageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAAverageFilter.h; sourceTree = "<group>"; };
+		80CBC28719A6960200DC0698 /* IAAverageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAAverageFilter.m; sourceTree = "<group>"; };
+		80CBC28919A6970D00DC0698 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		80CBC28B19A69DE000DC0698 /* AverageFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AverageFilter.cikernel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CBC28A19A6970D00DC0698 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,7 @@
 		80CBC25A19A6946800DC0698 = {
 			isa = PBXGroup;
 			children = (
+				80CBC28919A6970D00DC0698 /* QuartzCore.framework */,
 				80CBC26519A6946800DC0698 /* ImageAverage */,
 				80CBC27919A6946800DC0698 /* ImageAverageTests */,
 				80CBC26419A6946800DC0698 /* Products */,
@@ -81,6 +90,8 @@
 				80CBC26D19A6946800DC0698 /* Images.xcassets */,
 				80CBC26F19A6946800DC0698 /* MainMenu.xib */,
 				80CBC26619A6946800DC0698 /* Supporting Files */,
+				80CBC28619A6960200DC0698 /* IAAverageFilter.h */,
+				80CBC28719A6960200DC0698 /* IAAverageFilter.m */,
 			);
 			path = ImageAverage;
 			sourceTree = "<group>";
@@ -90,6 +101,7 @@
 			children = (
 				80CBC26719A6946800DC0698 /* Info.plist */,
 				80CBC26819A6946800DC0698 /* main.m */,
+				80CBC28B19A69DE000DC0698 /* AverageFilter.cikernel */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80CBC26E19A6946800DC0698 /* Images.xcassets in Resources */,
+				80CBC28C19A69DE000DC0698 /* AverageFilter.cikernel in Resources */,
 				80CBC27119A6946800DC0698 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CBC28819A6960200DC0698 /* IAAverageFilter.m in Sources */,
 				80CBC26C19A6946800DC0698 /* AppDelegate.m in Sources */,
 				80CBC26919A6946800DC0698 /* main.m in Sources */,
 			);
@@ -329,6 +343,7 @@
 				INFOPLIST_FILE = ImageAverage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -340,6 +355,7 @@
 				INFOPLIST_FILE = ImageAverage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};

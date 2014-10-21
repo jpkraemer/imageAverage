@@ -1,0 +1,10 @@
+
+kernel vec4 averagePerPixelKernel(sampler average, sampler otherImage, float count)
+{
+    vec2 d = destCoord();
+
+    vec4 a = unpremultiply(sample(average, samplerTransform(average, d)));
+    vec4 b = unpremultiply(sample(otherImage, samplerTransform(otherImage, d)));
+    a = a + (b - a) / count;
+    return premultiply(a);
+}
