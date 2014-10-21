@@ -1,7 +1,7 @@
 imageAverage
 ============
 
-A rudimentary tool to test the claim the [average color of all images would be yellow][1]. 
+A rudimentary tool to test the claim that the [average color of all images would be yellow][1]. 
 
 Photos need to be all the same pixel dimension. 
 
