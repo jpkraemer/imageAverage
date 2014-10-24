@@ -414,6 +414,7 @@
 				80CBC28219A6946800DC0698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80CBC28319A6946800DC0698 /* Build configuration list for PBXNativeTarget "ImageAverageTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				80CBC28519A6946800DC0698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
